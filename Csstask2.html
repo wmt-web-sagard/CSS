@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 50%;
+            margin: auto;
+            border: 1px solid black;
+        }
+        .nav{
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+        }
+        .rows{
+            width: 100%;
+            height: 30%;
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .row1{
+            background-color: orange;
+            
+        }
+        .row2{
+            background-color: rgb(202, 223, 216);
+        }
+        .row3{
+            background-color: green;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        } 
+        /* A box  Part CSS*/  
+        .searchForm{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        .search{
+            margin-right: 5px;
+            width: 70%;
+            border: 2px solid black;
+        }
+        .search::placeholder{
+            color: black;
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .btn{
+            border: 2px solid black;
+            padding: 10px;
+            font-size: larger;
+            padding-top: 5px;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .A{
+            position:absolute;
+            top:45%;
+            left:50%;
+            color: aliceblue;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .B{
+            position:absolute;
+            top:45%;
+            left:50%;
+            color: black;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .C{
+            position:absolute;
+            top:3%;
+            left:50%;
+            color: aliceblue;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        /* B Box Part CSS*/
+        .box{
+            font-family: 'Courier New', Courier, monospace;
+            width: 60px;
+            height: 60px;
+            border: 2px solid blue;
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #dae8fc;
+        }
+        .b1{
+            top: 20px;
+            left: 10px;
+        }
+        .b2{
+            
+            top: 20px;
+            right: 10px;
+        }
+        .b3{
+            
+            bottom: 10px;
+            left: 10px;
+        }
+        .b4{
+            
+            bottom: 10px;
+            right: 10px;
+        }
+        /* C Box Part CSS*/
+        .Emptybox{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+
+
+
+        /* Resposive Part*/
+        @media screen and (max-width : 650px){
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .container{
+                height: 150vh;
+                width: 90%;
+                border: 2px solid black;
+            }
+            .nav{
+                height: 10%;
+                width: 100%;
+                text-align: center;
+            }
+            .row1{
+                height: 20%;
+                width: 100%;
+            }
+            .searchForm{
+                width: 100%;
+                height: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .search{
+                width: 90%;
+                height: 30%;
+            }
+            .btn{
+                margin-top: -10%;
+                height: 30%;
+            }
+            .A{
+                position:absolute;
+                top:75%;
+            }
+            .row2{
+                height: 20%;
+            }
+            .row3{
+                height: 50%;
+                flex-wrap: wrap;
+                align-items: start;
+            }
+            .Emptybox{
+                margin-top: 40px;
+                width: 300px;
+                height: 130px;
+            }
+            .C{
+                top: 1%;
+            }
+
+        }
+            
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            Design 2
+        </div>
+        <div class="rows row1">
+            <div class="searchForm">
+                <input type="text" placeholder="Search Text" class="search">
+                <input type="submit" class="btn" value="Button">
+            </div>
+            <div class="A">A</div>
+        </div>
+        <div class="rows row2">
+            <div class="box b1">B1</div>
+            <div class="box b2">B2</div>
+            <div class="box b3">B3</div>
+            <div class="box b4">B4</div>
+            <div class="B">B</div>
+        </div>
+        <div class="rows row3">
+            <div class="Emptybox"></div>
+            <div class="Emptybox"></div>
+            <div class="Emptybox"></div>
+            <div class="C">C</div>
+        </div>
+    </div>
+</body>
+</html>
