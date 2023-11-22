@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 40%;
+            height: 100vh;
+        }
+        .row1{
+            width: 100%;
+            height: 10%;
+            padding-top:30px ;
+            text-align: center;
+            border: 2px solid black;
+        }
+        .row{
+            height: 45%;
+            width: 100%;
+        }
+        .col{
+            width: 50%;
+            height: 100%;
+            float: left;
+            position: relative;
+        }
+        .c1{
+            background-color: #dae8fc;
+            border: 2px solid #a0b8dc;
+        }
+        .c2{
+            background-color: #d5e8d4;
+            border: 2px solid  #abcd9d;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .c3{
+            background-color: #fff2cc;
+            border: 2px solid  #e9d28d;
+        }
+        .c4{
+            background-color: #e1d5e7;
+            border: 2px solid  #bba4c6;
+        }
+        .child{
+            width: 100px;
+            height: 70px;
+            background-color: blue;
+            color: white;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .child1{
+            position: absolute;
+            top: 10px;
+        }
+        .child3{
+            position: absolute;
+            bottom: -1px;
+        }
+        .child4{
+            position: absolute;
+            top: 40%;
+        }
+        .innerDiv{
+           
+            width: 70%;
+            height: 80%;
+            background-color: #fff2cc;
+            border: 2px solid  #e9d28d;
+            
+            text-align: center;
+            z-index: 2;
+        }
+        .num{
+            position: absolute;
+            left: 50%;
+            font-weight: 900;
+            font-size: xx-large;
+        }
+        .n1{
+            top: 40%;
+        }
+        .n2{
+            top: 5%;
+        }
+        .n3{
+            top: 40%;
+        }
+        .n4{
+            top: 5%;
+        }
+        @media screen and (max-width : 800px){
+            .container{
+                height: 200vh;
+                width: 100%;
+            }
+            body{
+                display: block;
+            }
+            .row1{
+
+                padding: 5%;
+                width: 100%;
+                height: 5%;
+            }
+            .col{
+                width: 100%;
+                height: 50;
+                display: flex;
+                justify-content: center;
+            }
+            .row{
+                width: 100%;
+                height: 23.75%;
+            }
+            .innerDiv{
+                width: 70%;
+                height: 80%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row1">Design 1</div>
+        <div class="row">
+            <div class="col c1">
+                <div class="child child1">Child</div>
+                <div class="num n1">1</div>
+            </div> 
+            <div class="col c2">
+                <div class="innerDiv">
+                    View outer margin should be same on all side
+                    
+                </div>
+                <div class="num n2">2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col c3 ">
+                <div class="child child3">Child</div>
+                <div class="num n3">3</div>
+            </div>
+            <div class="col c4">
+                <div class="child child4">Child</div>
+                <div class="num n4">4</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
